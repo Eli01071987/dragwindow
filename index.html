@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="js/lib/jquery-2.2.4.min.js"></script>
+        <script src="js/index.js"></script>
+    </head>   
+    <body class="bg-light">
+        <div class="container">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header draggable">
+                            <h4 class="modal-title">Список сотрудников</h4>
+                        </div>
+                        <form class="customer">
+                            <div class="row">
+                                <label for="employeeCount">Количество сотрудников</label>
+                                <input type="text" class="form-control" id="employee-count" name="employeeCount" value="">
+                            </div>
+                            <div class="customer-info">
+                                <div>
+                                    <fieldset>
+                                        <legend>Пол</legend>
+                                        <div class="sex">
+                                            <div class="custom-control custom-radio">
+                                                <input id="sex-m" name="sex" type="radio" class="custom-control-input" value="1" checked="checked">
+                                                <label class="custom-control-label" for="sex-m">М</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input id="sex-f" name="sex" type="radio" class="custom-control-input" value="2">
+                                                <label class="custom-control-label" for="sex-f">Ж</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div>
+                                    <fieldset>
+                                        <legend>Возраст</legend>
+                                        <div class="age">
+                                            <div class="custom-control">
+                                                <label>от</label>
+                                                <input type="text" class="form-control" name="ageFrom" value="">
+                                            </div>
+                                            <div class="custom-control">
+                                                <label>до</label>
+                                                <input type="text" class="form-control" name="ageTo" value="">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Загрузить</button>
+                        </form>
+                        <div class="container-0">
+                            <div class="container-1">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th><div>ФИО</div></th>
+                                            <th><div>Пол</div></th>
+                                            <th><div>Возраст</div></th>
+                                            <th><div>Телефон</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="result-set-content">                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="footer">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
