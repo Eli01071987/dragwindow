@@ -67,64 +67,6 @@ legend {
     vertical-align: bottom;
 }
 
-.container-0 {
-    position: relative;
-    border: 1px solid #e5e5e5;
-    padding-top: 35px;
-    background-color: aliceblue;
-}
-
-.container-1 {
-    height: 200px;
-    overflow-y: auto;
-}
-
-table {
-    width: 100%;
-    text-align: center;
-}
-
-thead {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-td + td {
-  border-left:1px solid #eee;
-}
-
-td, th {
-  border-bottom:1px solid #eee;
-  background: #ddd;
-  color: #000;
-  padding: 10px 25px;
-}
-
-th {
-  height: 0;
-  line-height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: transparent;
-  border: none;
-  white-space: nowrap;
-}
-
-th div{
-  position: absolute;
-  background: transparent;
-  color: black;
-  padding: 9px 25px;
-  top: 0;
-  margin-left: -25px;
-  line-height: normal;
-  border-left: 1px solid #e5e5e5;
-      font-weight: 500;
-}
-
-th:first-child div{
-    border: none;
-}
-
 .footer {
     padding: 5px;
 }
@@ -132,4 +74,78 @@ th:first-child div{
 .draggable {
     cursor: move;
     user-select: none;
-} 
+}
+
+table.scroll {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid #e5e5e5;
+}
+
+table.scroll tbody,
+table.scroll thead {
+    display: block;
+}
+
+table.scroll tbody {
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+thead {
+    background: #f9c9c9;
+}
+
+tbody td,
+thead th {
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    background: #ddd;
+    color: #000;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+thead th {
+    background: #f9c9c9;
+    text-align: center;
+    font-weight: 500;
+}
+
+tbody td:first-child,
+thead th:first-child {
+    width: 30%;
+}
+
+tbody td:last-child,
+thead th:last-child {
+    border-right: none;
+    width: 30%
+}
+
+#toast-container {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 250px;
+  height: 50px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+#toast-container .toast {
+    padding: 10px;
+    text-align: center;
+}
+
+#toast-container .toast .toast-message {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.toast-error {
+    border-radius: 10px;
+    background-color: red
+}

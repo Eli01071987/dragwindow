@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="css/custom.css">
         <script src="js/lib/jquery-2.2.4.min.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/lib/toastr.min.js"></script>
     </head>   
     <body class="bg-light">
         <div class="container">
@@ -13,10 +14,10 @@
                         <div class="modal-header draggable">
                             <h4 class="modal-title">Список сотрудников</h4>
                         </div>
-                        <form class="customer">
+                        <form id="customer" class="customer">
                             <div class="row">
                                 <label for="employeeCount">Количество сотрудников</label>
-                                <input type="text" class="form-control" id="employee-count" name="employeeCount" value="">
+                                <input type="text" class="form-control prevent-letter-input" id="employee-count" name="employeeCount" value="">
                             </div>
                             <div class="customer-info">
                                 <div>
@@ -40,30 +41,30 @@
                                         <div class="age">
                                             <div class="custom-control">
                                                 <label>от</label>
-                                                <input type="text" class="form-control" name="ageFrom" value="">
+                                                <input type="text" class="form-control prevent-letter-input" name="ageFrom" value="">
                                             </div>
                                             <div class="custom-control">
                                                 <label>до</label>
-                                                <input type="text" class="form-control" name="ageTo" value="">
+                                                <input type="text" class="form-control prevent-letter-input" name="ageTo" value="">
                                             </div>
                                         </div>
                                     </fieldset>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary">Загрузить</button>
+                            <button type="button" id="load" class="btn btn-primary">Загрузить</button>
                         </form>
                         <div class="container-0">
                             <div class="container-1">
-                                <table>
+                                <table class="scroll">
                                     <thead>
                                         <tr>
-                                            <th><div>ФИО</div></th>
-                                            <th><div>Пол</div></th>
-                                            <th><div>Возраст</div></th>
-                                            <th><div>Телефон</div></th>
+                                            <th>ФИО</th>
+                                            <th>Пол</th>
+                                            <th>Возраст</th>
+                                            <th>Телефон</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="result-set-content">                                        
+                                    <tbody class="result-set-content">                                    
                                     </tbody>
                                 </table>
                             </div>
